@@ -1,20 +1,15 @@
 {
-  "name": "projeto_nodejs",
+  "name": "casadocodigo",
   "version": "1.0.0",
-  "description": "Imoveis online ",
+  "description": "Livraria Casa do Codigo",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VittorioBarella/Projeto_NodeJS.git"
-  },
-  "author": "Vittório de Andrade Barella",
+  "author": "Gabriel Leite",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VittorioBarella/Projeto_NodeJS/issues"
-  },
-  "homepage": "https://github.com/VittorioBarella/Projeto_NodeJS#readme"
+  "dependencies": {
+    "express": "4.16.3"
+  }
 }
