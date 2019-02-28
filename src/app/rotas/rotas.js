@@ -22,19 +22,16 @@ module.exports = (app) => {
     app.get('/livros', function (req, resp) {
 
         const livroDAO = new LivroDAO(db);
-
-        livroDAO.lista(function(erro,resultados) {
-            resp.marko(
+        livroDAO.lista()
+            .then(livros =>resp.marko(
                 require('../views/livros/lista/lista.marko'),
                 {
-                    livros : resultados
+                    livros : livros
                 }
-            );
-        });
+            ))
+            .catch(erro => console.log(erro));
+        // livroDAO.lista(function(erro,resultados) {
 
-
-        // DB É A INSTÂNCIA DO BANCO DE DADOS.
-        // db.all('SELECT * FROM livros',function(erro,resultados) {
         //     resp.marko(
         //         require('../views/livros/lista/lista.marko'),
         //         {
