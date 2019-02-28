@@ -11,5 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.16.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VittorioBarella/Projeto_NodeJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VittorioBarella/Projeto_NodeJS/issues"
+  },
+  "homepage": "https://github.com/VittorioBarella/Projeto_NodeJS#readme"
 }
