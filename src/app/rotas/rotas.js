@@ -30,15 +30,21 @@ module.exports = (app) => {
                 }
             ))
             .catch(erro => console.log(erro));
-        // livroDAO.lista(function(erro,resultados) {
+    });
 
-        //     resp.marko(
-        //         require('../views/livros/lista/lista.marko'),
-        //         {
-        //             livros : resultados
-        //         }
-        //     );
-        // });
+    app.get('/livros/form', function(req,resp) {
+        resp.marko(require('../views/livros/form/form.marko'));
+    });
+
+    // OS DADOS SERÃO ENVIADOS NO CORPO DA REQUISIÇÃO, ATENDENDO ASSIM O MÉTODO POST.
+    app.post('/livros', function(req,resp) {
+        console.log(req.body);
+
+        const livroDAO = new LivroDAO(db);
+        livroDAO.adiciona(req.body)
+            .then(???)
+            .catch(erro => console.log(erro));
+
     });
 };
 
